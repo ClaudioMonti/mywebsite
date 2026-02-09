@@ -3,6 +3,7 @@ import './styles.css';
 
 const App = () => {
   const [language, setLanguage] = useState('it');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const texts = {
     it: {
@@ -214,6 +215,7 @@ const App = () => {
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setMenuOpen(false);
   };
 
   return (
@@ -223,7 +225,16 @@ const App = () => {
         <div className="nav-brand" onClick={() => scrollToSection('hero')}>
           Casa a Chiesina
         </div>
-        <div className="nav-links">
+        <button
+          className={`hamburger ${menuOpen ? 'active' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <button onClick={() => scrollToSection('gallery')}>{t.nav.gallery}</button>
           <button onClick={() => scrollToSection('services')}>{t.nav.services}</button>
           <button onClick={() => scrollToSection('location')}>{t.nav.location}</button>
@@ -326,7 +337,7 @@ const App = () => {
         <div className="map-container">
           <iframe
             title="Mappa"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.8!2d10.7167!3d43.8333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5b5e8e8e8e8e%3A0x0!2sVia%20Cavour%2053%2C%20Chiesina%20Uzzanese!5e0!3m2!1sit!2sit!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.5!2d10.7157!3d43.8396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a0331dbce7a55%3A0x4094f9b8db52ab0!2s51013%20Chiesina%20Uzzanese%20PT!5e0!3m2!1sit!2sit!4v1706000000000!5m2!1sit!2sit"
             width="100%"
             height="350"
             style={{ border: 0, borderRadius: '12px' }}
