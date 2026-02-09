@@ -204,7 +204,7 @@ p {
   min-height: 600px;
   background:
     linear-gradient(180deg, rgba(60, 50, 40, 0.3) 0%, rgba(60, 50, 40, 0.5) 100%),
-    url('/hero-bg.webp');
+    url('/foto-sito.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
