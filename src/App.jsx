@@ -195,6 +195,7 @@ const App = () => {
     'https://i.postimg.cc/Pxz89RR0/a49fc239-93d0-4d9e-8d50-539ea0c1d28a.webp',
     'https://i.postimg.cc/zv7c8gQw/20230726-185229.jpg',
     'https://i.postimg.cc/bJjCngcH/20230726-172854.jpg',
+    '/foto-sito.jpg',
   ];
 
   const [selectedImage, setSelectedImage] = useState(null);
