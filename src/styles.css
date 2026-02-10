@@ -929,14 +929,7 @@ p {
 }
 
 .chatbot-bubble::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--terracotta), var(--gold));
-  border-radius: 18px 18px 0 0;
+  display: none;
 }
 
 .chatbot-bubble span {
