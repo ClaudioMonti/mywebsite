@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
 
 const App = () => {
@@ -201,6 +201,21 @@ const App = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [formSent, setFormSent] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
+  const [bubbleFading, setBubbleFading] = useState(false);
+  const [bubbleHidden, setBubbleHidden] = useState(false);
+
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => {
+      setBubbleFading(true);
+    }, 5000);
+    const hideTimer = setTimeout(() => {
+      setBubbleHidden(true);
+    }, 6500);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -477,8 +492,8 @@ const App = () => {
 
       {/* Chatbot Guestore */}
       <div className="chatbot-container">
-        {!chatOpen && (
-          <div className="chatbot-bubble">
+        {!chatOpen && !bubbleHidden && (
+          <div className={`chatbot-bubble ${bubbleFading ? 'fade-out' : ''}`}>
             <span>{language === 'it' ? 'Ciao! Se hai bisogno di aiuto, sono qui per te!' : 'Hi! If you need help, I\'m here for you!'}</span>
             <div className="bubble-arrow"></div>
           </div>
