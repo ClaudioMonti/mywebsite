@@ -1,93 +1,63 @@
-// Stop words e parole comuni per lingua - usate per il rilevamento
-const ITALIAN_WORDS = [
-  // saluti
-  'ciao', 'salve', 'buongiorno', 'buonasera', 'buonanotte',
-  // pronomi
-  'io', 'tu', 'lui', 'lei', 'noi', 'voi', 'loro', 'mi', 'ti', 'ci', 'vi',
-  // articoli e preposizioni
-  'il', 'lo', 'la', 'gli', 'le', 'un', 'una', 'uno', 'del', 'della', 'dello',
-  'dei', 'delle', 'nel', 'nella', 'sul', 'sulla', 'al', 'alla', 'dal', 'dalla',
-  'di', 'da', 'per', 'con', 'tra', 'fra',
-  // verbi comuni
-  'sono', 'sei', 'siamo', 'hanno', 'avete', 'vorrei', 'posso', 'potrei',
-  'sapere', 'dire', 'fare', 'andare', 'venire', 'stare',
-  // altre parole comuni
-  'cosa', 'come', 'dove', 'quando', 'quale', 'quanto', 'perché',
-  'questo', 'questa', 'quello', 'quella', 'anche', 'ancora', 'sempre',
-  'molto', 'tutto', 'grazie', 'prego', 'scusa', 'casa', 'bene',
-];
+// Stesse keyword list dell'originale Python Guestore
+const ITALIAN_WORDS = ['ciao', 'salve', 'buongiorno', 'buonasera', 'grazie', 'prego', 'dove', 'quando', 'come'];
+const ENGLISH_WORDS = ['hello', 'hi', 'thank', 'please', 'where', 'when', 'how'];
+const FRENCH_WORDS = ['bonjour', 'salut', 'merci', "s'il", 'vous', 'plaît', 'où', 'quand', 'comment'];
 
-const ENGLISH_WORDS = [
-  // greetings
-  'hello', 'hi', 'hey', 'good morning', 'good evening',
-  // pronouns
-  'i', 'you', 'he', 'she', 'we', 'they', 'me', 'my', 'your', 'our', 'their',
-  // articles and prepositions
-  'the', 'a', 'an', 'of', 'to', 'in', 'on', 'at', 'for', 'with', 'from', 'by',
-  // verbs
-  'is', 'are', 'was', 'were', 'have', 'has', 'had', 'do', 'does', 'did',
-  'can', 'could', 'would', 'should', 'will', 'need', 'want', 'like',
-  // common words
-  'what', 'where', 'when', 'how', 'which', 'who', 'why',
-  'this', 'that', 'there', 'here', 'about', 'also', 'very',
-  'please', 'thank', 'thanks', 'yes', 'no', 'not',
-];
+// Trigrammi piu' frequenti per lingua (replica di langdetect)
+const TRIGRAMS = {
+  it: ' di, de, la, il, re, to, in, el, le, co, on, ta, te, al, ti, no, ne, ra, ri, er, io, en, si, an, at, nt, ar, che, li, lo, pe, un, ni, ia, nd, se, na, ol, so, es, tt, zione, me, or, st, da, ue, ll, za, tu',
+  en: ' th, he, in, er, an, re, on, en, at, ed, nd, ti, es, or, te, of, is, it, al, ar, st, to, nt, ng, se, ha, as, ou, io, le, ve, co, me, de, hi, ri, ro, ic, ne, ea, ra, ce, li, ch, ll, be, ma, si, om, ur',
+  fr: ' de, es, le, en, re, nt, on, er, te, el, an, la, ti, io, ne, it, is, ou, et, se, ai, me, co, ns, ur, qu, pa, ra, ar, em, ce, ss, un, il, in, ie, st, ue, us, tr, ir, ui, no, ri, au, oi, nd, al, or, ec',
+};
 
-const FRENCH_WORDS = [
-  // salutations
-  'bonjour', 'bonsoir', 'salut', 'bonne',
-  // pronoms
-  'je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles', 'mon', 'ma', 'mes',
-  'ton', 'votre', 'notre', 'leur', 'leurs',
-  // articles et prépositions
-  'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'au', 'aux',
-  'dans', 'sur', 'sous', 'avec', 'pour', 'par', 'chez', 'entre',
-  // verbes
-  'est', 'sont', 'suis', 'avez', 'avons', 'ont', 'fait', 'faire',
-  'pouvez', 'puis', 'voudrais', 'veux', 'peut',
-  // mots courants
-  'comment', 'où', 'quand', 'quel', 'quelle', 'quoi', 'pourquoi',
-  'cette', 'ces', 'aussi', 'très', 'bien', 'tout', 'tous',
-  'merci', 'oui', 'non', "s'il", 'plaît',
-];
+// Pre-processa i trigrammi in Set per lookup veloce
+const TRIGRAM_SETS = {};
+for (const [lang, str] of Object.entries(TRIGRAMS)) {
+  TRIGRAM_SETS[lang] = new Set(str.split(', ').map(t => t.trim()));
+}
 
-// Estrai parole dal testo rispettando i confini di parola
-function getWords(text) {
-  return text.toLowerCase().replace(/['']/g, "'").split(/[^a-zàáâãäåèéêëìíîïòóôõöùúûüçñ'-]+/).filter(Boolean);
+function trigramDetect(text) {
+  const lower = text.toLowerCase().replace(/[^a-zàáâãäåèéêëìíîïòóôõöùúûüçñ ]/g, '');
+  if (lower.length < 3) return null;
+
+  // Estrai trigrammi dal testo
+  const textTrigrams = [];
+  for (let i = 0; i <= lower.length - 3; i++) {
+    textTrigrams.push(lower.substring(i, i + 3));
+  }
+
+  // Conta quanti trigrammi del testo sono nel profilo di ogni lingua
+  let bestLang = null;
+  let bestScore = 0;
+
+  for (const [lang, trigramSet] of Object.entries(TRIGRAM_SETS)) {
+    const score = textTrigrams.filter(t => trigramSet.has(t)).length;
+    if (score > bestScore) {
+      bestScore = score;
+      bestLang = lang;
+    }
+  }
+
+  return bestLang;
 }
 
 export function detectLanguage(text, siteLanguage) {
-  const words = getWords(text);
   const lower = text.toLowerCase();
 
-  // Conta match con word boundary per parole singole, substring per frasi
-  const countMatches = (langWords) => {
-    let count = 0;
-    for (const lw of langWords) {
-      if (lw.includes(' ')) {
-        // Frasi multi-parola: usa substring match
-        if (lower.includes(lw)) count++;
-      } else {
-        // Parole singole: match esatto nella lista di parole
-        if (words.includes(lw)) count++;
-      }
-    }
-    return count;
-  };
+  // Step 1: keyword matching (identico all'originale Python)
+  const itCount = ITALIAN_WORDS.filter(w => lower.includes(w)).length;
+  const enCount = ENGLISH_WORDS.filter(w => lower.includes(w)).length;
+  const frCount = FRENCH_WORDS.filter(w => lower.includes(w)).length;
 
-  const itCount = countMatches(ITALIAN_WORDS);
-  const enCount = countMatches(ENGLISH_WORDS);
-  const frCount = countMatches(FRENCH_WORDS);
+  if (itCount > enCount && itCount > frCount) return 'it';
+  if (frCount > enCount && frCount > itCount) return 'fr';
+  if (enCount > 0) return 'en';
 
-  // Serve almeno 1 match per dichiarare una lingua
-  const max = Math.max(itCount, enCount, frCount);
-  if (max === 0) return siteLanguage || 'en';
+  // Step 2: trigram detection (replica di langdetect)
+  const detected = trigramDetect(text);
+  if (detected) return detected;
 
-  if (itCount === max && itCount > enCount && itCount > frCount) return 'it';
-  if (frCount === max && frCount > enCount && frCount > itCount) return 'fr';
-  if (enCount === max) return 'en';
-
-  // In caso di pareggio, usa la lingua del sito
+  // Step 3: fallback alla lingua del sito
   return siteLanguage || 'en';
 }
 
