@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
+import ChatBot from './ChatBot';
 
 const App = () => {
   const [language, setLanguage] = useState('it');
@@ -505,7 +506,7 @@ const App = () => {
         >
           {chatOpen ? '✕' : (
             <img
-              src="https://guestore.onrender.com/static/images/avatar.png"
+              src="/avatar.png"
               alt="Assistente virtuale"
               className="chatbot-avatar-img"
             />
@@ -515,14 +516,10 @@ const App = () => {
         {chatOpen && (
           <div className="chatbot-panel">
             <div className="chatbot-header">
-              <span>Assistente Virtuale</span>
+              <span>{language === 'it' ? 'Assistente Virtuale' : 'Virtual Assistant'}</span>
               <button onClick={() => setChatOpen(false)}>✕</button>
             </div>
-            <iframe
-              src="https://guestore.onrender.com/"
-              title="Guestore Chatbot"
-              className="chatbot-iframe"
-            />
+            <ChatBot language={language} onClose={() => setChatOpen(false)} />
           </div>
         )}
       </div>
