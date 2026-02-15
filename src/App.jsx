@@ -516,7 +516,7 @@ const App = () => {
         {chatOpen && (
           <div className="chatbot-panel">
             <div className="chatbot-header">
-              <span>Gueststore - {language === 'it' ? 'il tuo assistente virtuale' : 'your virtual assistant'}</span>
+              <span>Guestore - {language === 'it' ? 'il tuo assistente virtuale' : 'your virtual assistant'}</span>
               <button onClick={() => setChatOpen(false)}>✕</button>
             </div>
             <ChatBot language={language} onClose={() => setChatOpen(false)} />
