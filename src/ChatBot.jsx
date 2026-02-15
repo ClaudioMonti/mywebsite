@@ -46,6 +46,9 @@ const ChatBot = ({ language, onClose }) => {
       <div className="chatbot-messages">
         {messages.map((msg, i) => (
           <div key={i} className={`chatbot-msg chatbot-msg-${msg.sender}`}>
+            {msg.sender === 'bot' && (
+              <img src="/avatar.png" alt="" className="chatbot-msg-avatar" />
+            )}
             <div className="chatbot-msg-content">
               {msg.text.split('\n').map((line, j) => (
                 <p key={j}>{line}</p>
@@ -55,6 +58,7 @@ const ChatBot = ({ language, onClose }) => {
         ))}
         {isTyping && (
           <div className="chatbot-msg chatbot-msg-bot">
+            <img src="/avatar.png" alt="" className="chatbot-msg-avatar" />
             <div className="chatbot-typing">
               <span></span>
               <span></span>

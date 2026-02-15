@@ -1,6 +1,6 @@
-const ITALIAN_WORDS = ['ciao', 'salve', 'buongiorno', 'buonasera', 'grazie', 'prego', 'dove', 'quando', 'come'];
-const ENGLISH_WORDS = ['hello', 'hi', 'thank', 'please', 'where', 'when', 'how'];
-const FRENCH_WORDS = ['bonjour', 'salut', 'merci', "s'il", 'vous', 'plaît', 'où', 'quand', 'comment'];
+const ITALIAN_WORDS = ['ciao', 'salve', 'buongiorno', 'buonasera', 'grazie', 'prego', 'dove', 'quando', 'come', 'vorrei', 'posso', 'cosa', 'sono', 'qual è', 'potrei', 'avete', 'nella', 'della', 'questo', 'questa'];
+const ENGLISH_WORDS = ['hello', 'hi', 'thank', 'please', 'where', 'when', 'how', 'what', 'the', 'is', 'are', 'can', 'do', 'could', 'would', 'have', 'about', 'need', 'want', 'this', 'that', 'there'];
+const FRENCH_WORDS = ['bonjour', 'salut', 'merci', "s'il", 'vous', 'plaît', 'où', 'quand', 'comment', 'est-ce', 'avez', 'pouvez', 'cette', 'dans', 'quel', 'quelle', 'nous', 'notre', 'votre', 'les'];
 
 export function detectLanguage(text, siteLanguage) {
   const lower = text.toLowerCase();
