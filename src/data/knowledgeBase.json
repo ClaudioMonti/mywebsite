@@ -45,7 +45,7 @@
     }
   },
   "address": {
-    "keywords": ["indirizzo", "posizione", "ubicazione", "via cavour", "come arrivo", "raggiungere", "trovare la casa", "address", "location", "how to get", "find the house", "directions", "adresse", "comment arriver", "trouver la maison"],
+    "keywords": ["indirizzo", "posizione", "ubicazione", "via cavour", "come arrivo", "raggiungere", "trovare la casa", "casa", "address", "location", "how to get", "find the house", "directions", "house", "adresse", "comment arriver", "trouver la maison", "maison"],
     "responses": {
       "it": "📍 L'indirizzo è: Via Cavour 53, Chiesina Uzzanese (PT)",
       "en": "📍 The address is: Via Cavour 53, Chiesina Uzzanese (PT)",
@@ -61,7 +61,7 @@
     }
   },
   "attractions": {
-    "keywords": ["attrazioni", "visitare", "vedere", "turismo", "ristorante", "pizzeria", "mangiare", "cena", "pranzo", "attractions", "visit", "see", "tourism", "restaurant", "pizzeria", "eat", "dinner", "lunch", "visiter", "manger"],
+    "keywords": ["attrazioni", "visitare", "vedere", "turismo", "ristorante", "pizzeria", "mangiare", "cena", "pranzo", "cosa vedere", "dove mangiare", "attractions", "visit", "tourism", "restaurant", "eat", "dinner", "lunch", "what to see", "where to eat", "visiter", "manger", "que voir", "où manger"],
     "responses": {
       "it": "🍕🍝 Claudio ha scritto una guida sui migliori ristoranti/pizzerie della città sull'annuncio di Airbnb. Ti invito a consultarlo.",
       "en": "🍕🍝 Claudio has written a guide on the best restaurants/pizzerias in the city on the Airbnb listing. I invite you to check it out.",
@@ -77,7 +77,7 @@
     }
   },
   "contact": {
-    "keywords": ["contatto", "telefono", "email", "chiamare", "scrivere", "contact", "phone", "call", "email", "contacter", "téléphone", "appeler"],
+    "keywords": ["contatto", "telefono", "email", "chiamare", "scrivere", "contact", "phone", "call", "contacter", "téléphone", "appeler"],
     "responses": {
       "it": "📱 Puoi contattare Claudio al numero +39 3349209193\n📧 Email: claudiomonti9720@gmail.com\nÈ sempre disponibile.",
       "en": "📱 You can contact Claudio at +39 3349209193\n📧 Email: claudiomonti9720@gmail.com\nHe is always available.",

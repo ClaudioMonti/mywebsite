@@ -148,6 +148,10 @@ export function detectLanguage(text, siteLanguage) {
 
 export function findBestMatch(userMessage, userLang, knowledgeBase) {
   const normalized = userMessage.toLowerCase().trim();
+  // Estrai parole singole per matching esatto (evita sottostringhe)
+  const messageWords = new Set(
+    normalized.match(/[a-zàáâãäåèéêëìíîïòóôõöùúûüçñœæ'-]+/g) || []
+  );
 
   let bestCategory = null;
   let maxMatches = 0;
@@ -156,7 +160,14 @@ export function findBestMatch(userMessage, userLang, knowledgeBase) {
     if (category === 'fallback_responses') continue;
 
     const keywords = data.keywords || [];
-    const matches = keywords.filter(kw => normalized.includes(kw)).length;
+    const matches = keywords.filter(kw => {
+      if (kw.includes(' ')) {
+        // Keyword multi-parola: usa substring matching
+        return normalized.includes(kw);
+      }
+      // Keyword singola: confronto esatto con le parole del messaggio
+      return messageWords.has(kw);
+    }).length;
 
     if (matches > maxMatches) {
       maxMatches = matches;
