@@ -45,7 +45,7 @@
     }
   },
   "address": {
-    "keywords": ["indirizzo", "dove", "posizione", "ubicazione", "address", "where", "location", "adresse", "où"],
+    "keywords": ["indirizzo", "posizione", "ubicazione", "via cavour", "come arrivo", "raggiungere", "trovare la casa", "address", "location", "how to get", "find the house", "directions", "adresse", "comment arriver", "trouver la maison"],
     "responses": {
       "it": "📍 L'indirizzo è: Via Cavour 53, Chiesina Uzzanese (PT)",
       "en": "📍 The address is: Via Cavour 53, Chiesina Uzzanese (PT)",
