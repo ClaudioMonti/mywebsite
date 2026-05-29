@@ -43,7 +43,6 @@ const App = () => {
           { icon: '🍳', name: 'Cucina Attrezzata', desc: 'Tutto il necessario per cucinare' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Check-in e check-out automatici' },
           { icon: '🚲', name: 'Noleggio Biciclette', desc: 'Servizio disponibile su richiesta', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
-          { icon: '🧭', name: 'Tour con Cicerone', desc: 'Escursioni guidate in Valdinievole e Toscana', link: ciceroneUrl },
         ],
       },
       location: {
@@ -154,7 +153,6 @@ const App = () => {
           { icon: '🍳', name: 'Equipped Kitchen', desc: 'Everything you need to cook' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Automatic check-in and check-out' },
           { icon: '🚲', name: 'Bike Rental', desc: 'Service available on request', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
-          { icon: '🧭', name: 'Tours with Cicerone', desc: 'Guided excursions in Valdinievole and Tuscany', link: ciceroneUrl },
         ],
       },
       location: {
@@ -265,7 +263,6 @@ const App = () => {
           { icon: '🍳', name: 'Cuisine Équipée', desc: 'Tout le nécessaire pour cuisiner' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Arrivée et départ automatiques' },
           { icon: '🚲', name: 'Location de Vélos', desc: 'Service disponible sur demande', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
-          { icon: '🧭', name: 'Tours avec Cicerone', desc: 'Excursions guidées en Valdinievole et Toscane', link: ciceroneUrl },
         ],
       },
       location: {
