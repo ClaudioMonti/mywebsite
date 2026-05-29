@@ -18,6 +18,7 @@ const App = () => {
         prices: 'Prezzi',
         rules: 'Regole',
         attractions: 'Dintorni',
+        cicerone: 'Cicerone',
         contact: 'Contatti',
       },
       hero: {
@@ -34,6 +35,7 @@ const App = () => {
       },
       services: {
         title: 'Comfort e Servizi',
+        learnMore: 'Scopri di più',
         items: [
           { icon: '📶', name: 'WiFi Gratuito', desc: 'Connessione veloce in tutto l\'appartamento' },
           { icon: '🔥', name: 'Riscaldamento', desc: 'Per le fresche sere toscane' },
@@ -80,6 +82,21 @@ const App = () => {
           { name: 'Vinci', distance: '20 km', desc: 'Casa natale di Leonardo' },
         ],
       },
+      cicerone: {
+        eyebrow: 'Il tuo host è anche guida turistica',
+        title: 'Esplora la Toscana con Cicerone',
+        subtitle: '12 pacchetti escursionistici tra borghi medievali, terme storiche, capolavori d\'arte e sapori autentici della Valdinievole e Toscana.',
+        features: [
+          { icon: '🏰', name: 'Borghi Medievali', desc: 'Strade lastricate, torri antiche e storia millenaria' },
+          { icon: '♨️', name: 'Terme Storiche', desc: 'Benessere e relax nelle acque termali della Valdinievole' },
+          { icon: '🎨', name: 'Arte e Cultura', desc: 'Da Vinci, la Venere, i capolavori del Rinascimento' },
+          { icon: '🍷', name: 'Sapori Autentici', desc: 'Vino, olio extravergine, cecina e prodotti tipici' },
+        ],
+        stat1: '12 pacchetti',
+        stat2: '21 destinazioni',
+        stat3: '3 lingue',
+        cta: 'Scopri tutti i tour',
+      },
       contact: {
         title: 'Contattaci',
         subtitle: 'Hai domande? Scrivici!',
@@ -98,6 +115,10 @@ const App = () => {
       footer: {
         rights: 'Tutti i diritti riservati',
       },
+      chatbot: {
+        bubble: 'Ciao! Se hai bisogno di aiuto, sono qui per te!',
+        header: 'il tuo assistente virtuale',
+      },
     },
     en: {
       nav: {
@@ -108,6 +129,7 @@ const App = () => {
         prices: 'Prices',
         rules: 'House Rules',
         attractions: 'Nearby',
+        cicerone: 'Cicerone',
         contact: 'Contact',
       },
       hero: {
@@ -124,6 +146,7 @@ const App = () => {
       },
       services: {
         title: 'Comfort & Amenities',
+        learnMore: 'Learn more',
         items: [
           { icon: '📶', name: 'Free WiFi', desc: 'Fast connection throughout the apartment' },
           { icon: '🔥', name: 'Heating', desc: 'For cool Tuscan evenings' },
@@ -170,6 +193,21 @@ const App = () => {
           { name: 'Vinci', distance: '20 km', desc: 'Leonardo\'s birthplace' },
         ],
       },
+      cicerone: {
+        eyebrow: 'Your host is also a tour guide',
+        title: 'Explore Tuscany with Cicerone',
+        subtitle: '12 excursion packages through medieval villages, historic spas, art masterpieces and authentic flavours of the Valdinievole and Tuscany.',
+        features: [
+          { icon: '🏰', name: 'Medieval Villages', desc: 'Cobbled streets, ancient towers and centuries of history' },
+          { icon: '♨️', name: 'Historic Spas', desc: 'Wellness and relaxation in Valdinievole\'s thermal waters' },
+          { icon: '🎨', name: 'Art & Culture', desc: 'Da Vinci, Venus, masterpieces of the Renaissance' },
+          { icon: '🍷', name: 'Authentic Flavours', desc: 'Wine, extra virgin olive oil, cecina and local products' },
+        ],
+        stat1: '12 packages',
+        stat2: '21 destinations',
+        stat3: '3 languages',
+        cta: 'Discover all tours',
+      },
       contact: {
         title: 'Contact Us',
         subtitle: 'Have questions? Write to us!',
@@ -187,6 +225,121 @@ const App = () => {
       },
       footer: {
         rights: 'All rights reserved',
+      },
+      chatbot: {
+        bubble: 'Hi! If you need help, I\'m here for you!',
+        header: 'your virtual assistant',
+      },
+    },
+    fr: {
+      nav: {
+        home: 'Accueil',
+        gallery: 'Galerie',
+        services: 'Services',
+        location: 'Situation',
+        prices: 'Tarifs',
+        rules: 'Règlement',
+        attractions: 'Environs',
+        cicerone: 'Cicerone',
+        contact: 'Contact',
+      },
+      hero: {
+        title: 'Casa a Chiesina Uzzanese',
+        subtitle: 'Votre retraite apaisante au cœur de la Toscane',
+        cta: 'Découvrir',
+      },
+      about: {
+        title: 'Bienvenue',
+        description: 'Plongez dans l\'atmosphère authentique de la Toscane dans notre charmant appartement à Chiesina Uzzanese. Un refuge idéal pour ceux qui cherchent tranquillité, confort et la beauté intemporelle de la campagne toscane.',
+      },
+      gallery: {
+        title: 'Notre Maison',
+      },
+      services: {
+        title: 'Confort & Services',
+        learnMore: 'En savoir plus',
+        items: [
+          { icon: '📶', name: 'WiFi Gratuit', desc: 'Connexion rapide dans tout l\'appartement' },
+          { icon: '🔥', name: 'Chauffage', desc: 'Pour les fraîches soirées toscanes' },
+          { icon: '🚗', name: 'Parking', desc: 'Gratuit dans les zones environnantes' },
+          { icon: '🍳', name: 'Cuisine Équipée', desc: 'Tout le nécessaire pour cuisiner' },
+          { icon: '🔑', name: 'Self Check-in', desc: 'Arrivée et départ automatiques' },
+          { icon: '🚲', name: 'Location de Vélos', desc: 'Service disponible sur demande', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
+          { icon: '🧭', name: 'Tours avec Cicerone', desc: 'Excursions guidées en Valdinievole et Toscane', link: ciceroneUrl },
+        ],
+      },
+      location: {
+        title: 'Où Nous Sommes',
+        address: 'Via Cavour 53, Chiesina Uzzanese (PT)',
+        description: 'Au cœur de la Valdinievole, à deux pas du centre historique et bien relié aux principales villes d\'art toscanes.',
+      },
+      prices: {
+        title: 'Tarifs',
+        startingFrom: 'À partir de',
+        price: '€50',
+        perNight: 'par nuit',
+        note: 'Le prix final peut varier selon la saison, la durée du séjour, les frais de ménage et les taxes locales.',
+        cta: 'Vérifier les disponibilités',
+      },
+      rules: {
+        title: 'Règlement de la Maison',
+        checkIn: 'Check-in : à partir de 14h00 (automatique)',
+        checkOut: 'Check-out : avant 11h00 (automatique)',
+        guests: 'Maximum 2-3 personnes (canapé-lit disponible)',
+        items: [
+          { icon: '🚭', rule: 'Défense de fumer' },
+          { icon: '🐾', rule: 'Animaux non admis' },
+          { icon: '🎉', rule: 'Fêtes non autorisées' },
+          { icon: '🤫', rule: 'Silence à partir de 22h00' },
+        ],
+      },
+      attractions: {
+        title: 'À Voir aux Environs',
+        places: [
+          { name: 'Montecatini Terme', distance: '10 km', desc: 'Célèbre ville thermale' },
+          { name: 'Lucques', distance: '25 km', desc: 'Les remparts de la Renaissance' },
+          { name: 'Florence', distance: '45 km', desc: 'Berceau de la Renaissance' },
+          { name: 'Pise', distance: '50 km', desc: 'La Tour Penchée' },
+          { name: 'Collodi', distance: '15 km', desc: 'Parc de Pinocchio' },
+          { name: 'Vinci', distance: '20 km', desc: 'Lieu de naissance de Léonard de Vinci' },
+        ],
+      },
+      cicerone: {
+        eyebrow: 'Votre hôte est aussi guide touristique',
+        title: 'Explorez la Toscane avec Cicerone',
+        subtitle: '12 excursions à travers villages médiévaux, thermes historiques, chefs-d\'œuvre artistiques et saveurs authentiques de la Valdinievole et Toscane.',
+        features: [
+          { icon: '🏰', name: 'Villages Médiévaux', desc: 'Ruelles pavées, tours anciennes et histoire millénaire' },
+          { icon: '♨️', name: 'Thermes Historiques', desc: 'Bien-être et détente dans les eaux thermales de la Valdinievole' },
+          { icon: '🎨', name: 'Art & Culture', desc: 'Da Vinci, la Vénus, chefs-d\'œuvre de la Renaissance' },
+          { icon: '🍷', name: 'Saveurs Authentiques', desc: 'Vin, huile d\'olive, cecina et produits locaux' },
+        ],
+        stat1: '12 excursions',
+        stat2: '21 destinations',
+        stat3: '3 langues',
+        cta: 'Découvrir tous les tours',
+      },
+      contact: {
+        title: 'Nous Contacter',
+        subtitle: 'Des questions ? Écrivez-nous !',
+        name: 'Votre nom',
+        email: 'Votre e-mail',
+        message: 'Votre message',
+        send: 'Envoyer',
+        whatsapp: 'Écrivez-nous sur WhatsApp',
+        airbnb: 'Réserver sur Airbnb',
+      },
+      host: {
+        title: 'Votre Hôte',
+        name: 'Claudio Monti',
+        bio: 'Voyageur passionné, j\'adore partager la beauté de ma terre avec des hôtes du monde entier. Je serai ravi de vous donner des conseils pour rendre votre séjour inoubliable !',
+      },
+      footer: {
+        rights: 'Tous droits réservés',
+      },
+      chatbot: {
+        bubble: 'Bonjour ! Si vous avez besoin d\'aide, je suis là pour vous !',
+        header: 'votre assistant virtuel',
       },
     },
   };
@@ -260,6 +413,7 @@ const App = () => {
           <button onClick={() => scrollToSection('location')}>{t.nav.location}</button>
           <button onClick={() => scrollToSection('prices')}>{t.nav.prices}</button>
           <button onClick={() => scrollToSection('attractions')}>{t.nav.attractions}</button>
+          <button onClick={() => scrollToSection('cicerone')}>{t.nav.cicerone}</button>
           <button onClick={() => scrollToSection('contact')}>{t.nav.contact}</button>
         </div>
         <div className="lang-switch">
@@ -274,6 +428,12 @@ const App = () => {
             onClick={() => setLanguage('en')}
           >
             EN
+          </button>
+          <button
+            className={language === 'fr' ? 'active' : ''}
+            onClick={() => setLanguage('fr')}
+          >
+            FR
           </button>
         </div>
       </nav>
@@ -340,7 +500,7 @@ const App = () => {
                   rel="noopener noreferrer"
                   className="service-link"
                 >
-                  {language === 'it' ? 'Scopri di più' : 'Learn more'}
+                  {t.services.learnMore}
                 </a>
               )}
             </div>
@@ -422,27 +582,29 @@ const App = () => {
         </div>
       </section>
 
-      {/* Cicerone Banner */}
-      <section className="cicerone-banner-section">
-        <div className="cicerone-banner">
-          <div className="cicerone-banner-text">
-            <span className="cicerone-eyebrow">
-              {language === 'it' ? 'Il tuo host è anche guida turistica' : 'Your host is also a tour guide'}
-            </span>
-            <h2 className="cicerone-banner-title">CICERONE</h2>
-            <p>
-              {language === 'it'
-                ? '12 pacchetti escursionistici tra borghi medievali, terme storiche, capolavori d\'arte e sapori autentici della Valdinievole e Toscana.'
-                : '12 excursion packages through medieval villages, historic spas, art masterpieces and authentic flavours of the Valdinievole and Tuscany.'}
-            </p>
-          </div>
-          <a
-            href={ciceroneUrl}
-            className="cicerone-banner-btn"
-          >
-            {language === 'it' ? 'Scopri i tour →' : 'Discover the tours →'}
-          </a>
+      {/* Cicerone Section */}
+      <section id="cicerone" className="cicerone-section">
+        <span className="cicerone-eyebrow">{t.cicerone.eyebrow}</span>
+        <h2 className="cicerone-section-title">{t.cicerone.title}</h2>
+        <div className="cicerone-decorative-line"></div>
+        <p className="cicerone-section-subtitle">{t.cicerone.subtitle}</p>
+        <div className="cicerone-features-grid">
+          {t.cicerone.features.map((f, i) => (
+            <div key={i} className="cicerone-feature-card">
+              <span className="cicerone-feature-icon">{f.icon}</span>
+              <h3>{f.name}</h3>
+              <p>{f.desc}</p>
+            </div>
+          ))}
         </div>
+        <div className="cicerone-stats">
+          <span className="cicerone-stat">{t.cicerone.stat1}</span>
+          <span className="cicerone-stat-dot">·</span>
+          <span className="cicerone-stat">{t.cicerone.stat2}</span>
+          <span className="cicerone-stat-dot">·</span>
+          <span className="cicerone-stat">{t.cicerone.stat3}</span>
+        </div>
+        <a href={ciceroneUrl} className="cicerone-cta-btn">{t.cicerone.cta} →</a>
       </section>
 
       {/* Host Section */}
@@ -522,7 +684,7 @@ const App = () => {
       <div className="chatbot-container">
         {!chatOpen && !bubbleHidden && (
           <div className={`chatbot-bubble ${bubbleFading ? 'fade-out' : ''}`}>
-            <span>{language === 'it' ? 'Ciao! Se hai bisogno di aiuto, sono qui per te!' : 'Hi! If you need help, I\'m here for you!'}</span>
+            <span>{t.chatbot.bubble}</span>
             <div className="bubble-arrow"></div>
           </div>
         )}
@@ -543,7 +705,7 @@ const App = () => {
         {chatOpen && (
           <div className="chatbot-panel">
             <div className="chatbot-header">
-              <span>Guestore - {language === 'it' ? 'il tuo assistente virtuale' : 'your virtual assistant'}</span>
+              <span>Guestore - {t.chatbot.header}</span>
               <button onClick={() => setChatOpen(false)}>✕</button>
             </div>
             <ChatBot language={language} onClose={() => setChatOpen(false)} />

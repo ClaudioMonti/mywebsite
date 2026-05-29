@@ -1256,64 +1256,129 @@ p {
 }
 
 
-/* ===== CICERONE BANNER ===== */
-.cicerone-banner-section {
-  padding: 40px 20px;
-  background: var(--cream-dark);
+/* ===== CICERONE SECTION ===== */
+.cicerone-section {
+  padding: var(--section-padding);
+  text-align: center;
+  background: linear-gradient(160deg, #1e0e05 0%, #3a1e0a 50%, #1a0d04 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-.cicerone-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 50px;
-  background: linear-gradient(135deg, #2d1a0a 0%, #4a2810 55%, #1a1008 100%);
-  border-radius: 20px;
-  border: 1px solid rgba(201, 169, 98, 0.25);
-}
-
-.cicerone-banner-text {
-  flex: 1;
+.cicerone-section::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(ellipse at center, rgba(201, 169, 98, 0.07) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .cicerone-eyebrow {
   display: block;
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
 }
 
-.cicerone-banner-title {
+.cicerone-section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--white);
-  letter-spacing: 0.1em;
+  margin-bottom: 0;
+}
+
+.cicerone-decorative-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  opacity: 0.7;
+  margin: 1.2rem auto;
+}
+
+.cicerone-section-subtitle {
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.cicerone-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.cicerone-feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 169, 98, 0.18);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.cicerone-feature-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(201, 169, 98, 0.45);
+  transform: translateY(-5px);
+}
+
+.cicerone-feature-icon {
+  font-size: 2.2rem;
+  display: block;
   margin-bottom: 1rem;
+}
+
+.cicerone-feature-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.cicerone-feature-card p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.cicerone-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.cicerone-stat {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+.cicerone-stat-dot {
+  color: rgba(201, 169, 98, 0.4);
+  font-size: 1.6rem;
   line-height: 1;
 }
 
-.cicerone-banner p {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.72);
-  max-width: 500px;
-  margin: 0;
-  line-height: 1.75;
-  text-align: left;
-}
-
-.cicerone-banner-btn {
+.cicerone-cta-btn {
   display: inline-block;
-  flex-shrink: 0;
-  padding: 1rem 2rem;
-  background: var(--terracotta);
-  color: var(--white);
+  padding: 1rem 2.4rem;
+  background: var(--gold);
+  color: #1a0e05;
   text-decoration: none;
   border-radius: 6px;
   font-family: var(--font-sans);
@@ -1321,24 +1386,27 @@ p {
   font-size: 1rem;
   letter-spacing: 0.04em;
   transition: all 0.3s;
-  white-space: nowrap;
 }
 
-.cicerone-banner-btn:hover {
-  background: var(--terracotta-dark);
+.cicerone-cta-btn:hover {
+  background: #d4b56e;
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(196, 92, 62, 0.35);
+  box-shadow: 0 10px 30px rgba(201, 169, 98, 0.35);
 }
 
-@media (max-width: 768px) {
-  .cicerone-banner {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 25px;
+@media (max-width: 900px) {
+  .cicerone-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cicerone-features-grid {
+    grid-template-columns: 1fr;
   }
 
-  .cicerone-banner p {
-    margin: 0 auto;
-    text-align: center;
+  .cicerone-stats {
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
   }
 }
