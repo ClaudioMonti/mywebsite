@@ -7,6 +7,7 @@ const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const ciceroneUrl = '/cicerone/';
+  const bikeUrl = 'https://bike-rental-bnb-w7nx.onrender.com/';
 
   const texts = {
     it: {
@@ -17,7 +18,7 @@ const App = () => {
         location: 'Posizione',
         prices: 'Prezzi',
         rules: 'Regole',
-        attractions: 'Dintorni',
+        bikes: 'Biciclette',
         cicerone: 'Cicerone',
         contact: 'Contatti',
       },
@@ -42,7 +43,6 @@ const App = () => {
           { icon: '🚗', name: 'Parcheggio', desc: 'Gratuito nelle aree circostanti' },
           { icon: '🍳', name: 'Cucina Attrezzata', desc: 'Tutto il necessario per cucinare' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Check-in e check-out automatici' },
-          { icon: '🚲', name: 'Noleggio Biciclette', desc: 'Servizio disponibile su richiesta', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
         ],
       },
       location: {
@@ -70,16 +70,19 @@ const App = () => {
           { icon: '🤫', rule: 'Rispettare la quiete dopo le 22:00' },
         ],
       },
-      attractions: {
-        title: 'Cosa Vedere nei Dintorni',
-        places: [
-          { name: 'Montecatini Terme', distance: '10 km', desc: 'Famosa città termale' },
-          { name: 'Lucca', distance: '25 km', desc: 'Le mura rinascimentali' },
-          { name: 'Firenze', distance: '45 km', desc: 'Culla del Rinascimento' },
-          { name: 'Pisa', distance: '50 km', desc: 'La Torre Pendente' },
-          { name: 'Collodi', distance: '15 km', desc: 'Parco di Pinocchio' },
-          { name: 'Vinci', distance: '20 km', desc: 'Casa natale di Leonardo' },
+      bikes: {
+        eyebrow: 'Esplora la Valdinievole in libertà',
+        title: 'Noleggio Biciclette',
+        subtitle: 'Pedala tra vigneti, borghi medievali e terme storiche. Un modo autentico e sostenibile per scoprire il territorio toscano.',
+        features: [
+          { icon: '🗺️', name: 'Percorsi Consigliati', desc: 'Itinerari adatti a tutti i livelli, dai principianti agli esperti' },
+          { icon: '🌿', name: 'Natura e Paesaggi', desc: 'Campagna toscana, colline, vigneti e borghi pittoreschi' },
+          { icon: '🚲', name: 'Bici di Qualità', desc: 'Biciclette in ottimo stato, disponibili su prenotazione' },
+          { icon: '📍', name: 'Punto di Partenza', desc: 'Direttamente dall\'appartamento, senza spostamenti' },
         ],
+        stat1: 'Disponibile su richiesta',
+        stat2: 'Partenza dall\'appartamento',
+        cta: 'Scopri il servizio',
       },
       cicerone: {
         eyebrow: 'Il tuo host è anche guida turistica',
@@ -127,7 +130,7 @@ const App = () => {
         location: 'Location',
         prices: 'Prices',
         rules: 'House Rules',
-        attractions: 'Nearby',
+        bikes: 'Bikes',
         cicerone: 'Cicerone',
         contact: 'Contact',
       },
@@ -152,7 +155,6 @@ const App = () => {
           { icon: '🚗', name: 'Parking', desc: 'Free in surrounding areas' },
           { icon: '🍳', name: 'Equipped Kitchen', desc: 'Everything you need to cook' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Automatic check-in and check-out' },
-          { icon: '🚲', name: 'Bike Rental', desc: 'Service available on request', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
         ],
       },
       location: {
@@ -180,16 +182,19 @@ const App = () => {
           { icon: '🤫', rule: 'Quiet hours after 10:00 PM' },
         ],
       },
-      attractions: {
-        title: 'What to See Nearby',
-        places: [
-          { name: 'Montecatini Terme', distance: '10 km', desc: 'Famous spa town' },
-          { name: 'Lucca', distance: '25 km', desc: 'Renaissance walls' },
-          { name: 'Florence', distance: '45 km', desc: 'Cradle of the Renaissance' },
-          { name: 'Pisa', distance: '50 km', desc: 'The Leaning Tower' },
-          { name: 'Collodi', distance: '15 km', desc: 'Pinocchio Park' },
-          { name: 'Vinci', distance: '20 km', desc: 'Leonardo\'s birthplace' },
+      bikes: {
+        eyebrow: 'Explore the Valdinievole freely',
+        title: 'Bike Rental',
+        subtitle: 'Pedal through vineyards, medieval villages and historic spas. An authentic and sustainable way to discover the Tuscan countryside.',
+        features: [
+          { icon: '🗺️', name: 'Suggested Routes', desc: 'Itineraries for all levels, from beginners to experienced cyclists' },
+          { icon: '🌿', name: 'Nature & Scenery', desc: 'Tuscan countryside, hills, vineyards and picturesque villages' },
+          { icon: '🚲', name: 'Quality Bikes', desc: 'Well-maintained bicycles, available on request' },
+          { icon: '📍', name: 'Starting Point', desc: 'Directly from the apartment, no transfers needed' },
         ],
+        stat1: 'Available on request',
+        stat2: 'Depart from the apartment',
+        cta: 'Discover the service',
       },
       cicerone: {
         eyebrow: 'Your host is also a tour guide',
@@ -237,7 +242,7 @@ const App = () => {
         location: 'Situation',
         prices: 'Tarifs',
         rules: 'Règlement',
-        attractions: 'Environs',
+        bikes: 'Vélos',
         cicerone: 'Cicerone',
         contact: 'Contact',
       },
@@ -262,7 +267,6 @@ const App = () => {
           { icon: '🚗', name: 'Parking', desc: 'Gratuit dans les zones environnantes' },
           { icon: '🍳', name: 'Cuisine Équipée', desc: 'Tout le nécessaire pour cuisiner' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Arrivée et départ automatiques' },
-          { icon: '🚲', name: 'Location de Vélos', desc: 'Service disponible sur demande', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
         ],
       },
       location: {
@@ -290,16 +294,19 @@ const App = () => {
           { icon: '🤫', rule: 'Silence à partir de 22h00' },
         ],
       },
-      attractions: {
-        title: 'À Voir aux Environs',
-        places: [
-          { name: 'Montecatini Terme', distance: '10 km', desc: 'Célèbre ville thermale' },
-          { name: 'Lucques', distance: '25 km', desc: 'Les remparts de la Renaissance' },
-          { name: 'Florence', distance: '45 km', desc: 'Berceau de la Renaissance' },
-          { name: 'Pise', distance: '50 km', desc: 'La Tour Penchée' },
-          { name: 'Collodi', distance: '15 km', desc: 'Parc de Pinocchio' },
-          { name: 'Vinci', distance: '20 km', desc: 'Lieu de naissance de Léonard de Vinci' },
+      bikes: {
+        eyebrow: 'Explorez la Valdinievole en liberté',
+        title: 'Location de Vélos',
+        subtitle: 'Pédalez entre vignobles, villages médiévaux et thermes historiques. Une façon authentique et durable de découvrir la campagne toscane.',
+        features: [
+          { icon: '🗺️', name: 'Itinéraires Conseillés', desc: 'Parcours adaptés à tous les niveaux, des débutants aux expérimentés' },
+          { icon: '🌿', name: 'Nature & Paysages', desc: 'Campagne toscane, collines, vignobles et villages pittoresques' },
+          { icon: '🚲', name: 'Vélos de Qualité', desc: 'Bicyclettes en parfait état, disponibles sur réservation' },
+          { icon: '📍', name: 'Point de Départ', desc: 'Directement depuis l\'appartement, sans déplacement' },
         ],
+        stat1: 'Disponible sur demande',
+        stat2: 'Départ depuis l\'appartement',
+        cta: 'Découvrir le service',
       },
       cicerone: {
         eyebrow: 'Votre hôte est aussi guide touristique',
@@ -409,7 +416,8 @@ const App = () => {
           <button onClick={() => scrollToSection('services')}>{t.nav.services}</button>
           <button onClick={() => scrollToSection('location')}>{t.nav.location}</button>
           <button onClick={() => scrollToSection('prices')}>{t.nav.prices}</button>
-          <button onClick={() => scrollToSection('attractions')}>{t.nav.attractions}</button>
+          <button onClick={() => scrollToSection('rules')}>{t.nav.rules}</button>
+          <button onClick={() => scrollToSection('bikes')}>{t.nav.bikes}</button>
           <button onClick={() => scrollToSection('cicerone')}>{t.nav.cicerone}</button>
           <button onClick={() => scrollToSection('contact')}>{t.nav.contact}</button>
         </div>
@@ -564,19 +572,27 @@ const App = () => {
         </div>
       </section>
 
-      {/* Attractions Section */}
-      <section id="attractions" className="section attractions">
-        <h2>{t.attractions.title}</h2>
-        <div className="decorative-line"></div>
-        <div className="attractions-grid">
-          {t.attractions.places.map((place, index) => (
-            <div key={index} className="attraction-card">
-              <h3>{place.name}</h3>
-              <span className="distance">{place.distance}</span>
-              <p>{place.desc}</p>
+      {/* Bikes Section */}
+      <section id="bikes" className="bikes-section">
+        <span className="bikes-eyebrow">{t.bikes.eyebrow}</span>
+        <h2 className="bikes-section-title">{t.bikes.title}</h2>
+        <div className="bikes-decorative-line"></div>
+        <p className="bikes-section-subtitle">{t.bikes.subtitle}</p>
+        <div className="bikes-features-grid">
+          {t.bikes.features.map((f, i) => (
+            <div key={i} className="bikes-feature-card">
+              <span className="bikes-feature-icon">{f.icon}</span>
+              <h3>{f.name}</h3>
+              <p>{f.desc}</p>
             </div>
           ))}
         </div>
+        <div className="bikes-stats">
+          <span className="bikes-stat">{t.bikes.stat1}</span>
+          <span className="bikes-stat-dot">·</span>
+          <span className="bikes-stat">{t.bikes.stat2}</span>
+        </div>
+        <a href={bikeUrl} target="_blank" rel="noopener noreferrer" className="bikes-cta-btn">{t.bikes.cta} →</a>
       </section>
 
       {/* Cicerone Section */}
