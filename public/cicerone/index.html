@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cicerone — Guida Turistica in Valdinievole e Toscana</title>
+    <meta name="description" content="Esplora la Valdinievole e la Toscana con Cicerone. Tour guidati, 12 pacchetti escursionistici e itinerari personalizzati.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGAZIONE -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-main">CICERONE</span>
+                <span class="logo-sub" data-i18n="logo.sub">Guida in Valdinievole e Toscana</span>
+            </a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="it" aria-label="Italiano" title="Italiano">
+                    <img src="https://flagcdn.com/w40/it.png" alt="Italiano" width="28">
+                </button>
+                <button class="lang-btn" data-lang="en" aria-label="English" title="English">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="English" width="28">
+                </button>
+                <button class="lang-btn" data-lang="fr" aria-label="Français" title="Français">
+                    <img src="https://flagcdn.com/w40/fr.png" alt="Français" width="28">
+                </button>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Chi siamo</a></li>
+                <li><a href="#packages" class="nav-link" data-i18n="nav.packages">Pacchetti</a></li>
+                <li><a href="#destinations" class="nav-link" data-i18n="nav.destinations">Destinazioni</a></li>
+                <li><a href="#products" class="nav-link" data-i18n="nav.products">Sapori</a></li>
+                <li><a href="#contact" class="nav-link nav-cta" data-i18n="nav.contact">Prenota</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow" data-i18n="hero.eyebrow">La tua guida in Toscana</p>
+            <h1 class="hero-title" data-i18n-html="hero.title">
+                Scopri la<br><em>Valdinievole</em><br>e la Toscana
+            </h1>
+            <p class="hero-subtitle" data-i18n-html="hero.subtitle">
+                Borghi medievali, terme storiche, capolavori rinascimentali, sapori autentici.<br>
+                Itinerari su misura per vivere la Toscana.
+            </p>
+            <div class="hero-ctas">
+                <a href="#packages" class="btn btn-primary" data-i18n="hero.cta1">Esplora i Pacchetti</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="hero.cta2">Prenota una visita</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">12</span>
+                    <span class="stat-label" data-i18n="hero.stat.packages">Pacchetti</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">21</span>
+                    <span class="stat-label" data-i18n="hero.stat.destinations">Destinazioni</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">8</span>
+                    <span class="stat-label" data-i18n="hero.stat.products">Prodotti tipici</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="hero-scroll" aria-label="Scorri">
+            <span data-i18n="hero.scroll">Scopri di più</span>
+            <div class="scroll-arrow"></div>
+        </a>
+    </section>
+
+    <!-- CHI SIAMO -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-eyebrow" data-i18n="about.eyebrow">Chi siamo</span>
+                    <h2 class="section-title" data-i18n-html="about.title">Una guida,<br>tante storie<br>da raccontare</h2>
+                    <p data-i18n-html="about.p1">Cicerone nasce dalla passione per un territorio straordinario: la <strong>Valdinievole</strong> e la Toscana circostante, un mosaico di borghi medievali, terme storiche, ville medicee, paesaggi olivastri e tradizioni culinarie millenarie.</p>
+                    <p data-i18n-html="about.p2">Non una guida che elenca fatti, ma chi <em>racconta storie</em>: la battaglia di Montecatini del 1315, il legame tra Collodi e Pinocchio, il giallo di Isabella de' Medici, le gru che ogni autunno attraversano il Padule di Fucecchio.</p>
+                    <p data-i18n="about.p3">Ogni itinerario è pensato per portarti al cuore autentico della Toscana, lontano dai percorsi battuti.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-dot"></div>
+                            <div>
+                                <strong data-i18n="about.f1.title">Itinerari su misura</strong>
+                                <p data-i18n="about.f1.desc">Da mezza giornata a weekend completi, per ogni esigenza e interesse</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-dot"></div>
+                            <div>
+                                <strong data-i18n="about.f2.title">Esperienze autentiche</strong>
+                                <p data-i18n="about.f2.desc">Frantoi, cantine, mercati locali, borghi fuori dalle rotte di massa</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-dot"></div>
+                            <div>
+                                <strong data-i18n="about.f3.title">Storytelling coinvolgente</strong>
+                                <p data-i18n="about.f3.desc">Storia, arte, gastronomia e natura intrecciati in narrazioni memorabili</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-photo-wrap">
+                        <img src="photo_11_2025-08-07_21-33-48.jpg" alt="Claudio Monti — Guida Turistica in Valdinievole e Toscana" class="about-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACCHETTI -->
+    <section id="packages">
+        <div class="container">
+            <span class="section-eyebrow" data-i18n="pkg.eyebrow">I nostri itinerari</span>
+            <h2 class="section-title" data-i18n="pkg.title">12 Pacchetti Escursionistici</h2>
+            <p class="section-subtitle" data-i18n="pkg.subtitle">Dalla mezza giornata al weekend di più giorni, per ogni tipo di viaggiatore</p>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Tutti</button>
+                <button class="filter-btn" data-filter="half-day" data-i18n="filter.half">Mezza giornata</button>
+                <button class="filter-btn" data-filter="full-day" data-i18n="filter.full">Giornata intera</button>
+                <button class="filter-btn" data-filter="multi-day" data-i18n="filter.multi">Multi-giorno</button>
+            </div>
+            <div class="packages-grid" id="packagesGrid"></div>
+        </div>
+    </section>
+
+    <!-- DESTINAZIONI -->
+    <section id="destinations">
+        <div class="container">
+            <span class="section-eyebrow" data-i18n="dest.eyebrow">Dove andiamo</span>
+            <h2 class="section-title" data-i18n="dest.title">21 Destinazioni</h2>
+            <p class="section-subtitle" data-i18n="dest.subtitle">Dalla Valdinievole fino a Firenze, Pisa e Lucca</p>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-dest-filter="all" data-i18n="dest.filter.all">Tutte</button>
+                <button class="filter-btn" data-dest-filter="terme" data-i18n="dest.filter.terme">Terme &amp; Benessere</button>
+                <button class="filter-btn" data-dest-filter="borghi" data-i18n="dest.filter.borghi">Borghi Medievali</button>
+                <button class="filter-btn" data-dest-filter="arte" data-i18n="dest.filter.arte">Arte &amp; Città</button>
+                <button class="filter-btn" data-dest-filter="natura" data-i18n="dest.filter.natura">Natura</button>
+            </div>
+            <div class="destinations-grid" id="destinationsGrid"></div>
+        </div>
+    </section>
+
+    <!-- SAPORI -->
+    <section id="products">
+        <div class="container">
+            <span class="section-eyebrow" data-i18n="prod.eyebrow">Sapori del territorio</span>
+            <h2 class="section-title" data-i18n="prod.title">I Prodotti Tipici</h2>
+            <p class="section-subtitle" data-i18n="prod.subtitle">Ogni tour include almeno una sosta gastronomica. Il cibo è parte integrante dell'esperienza toscana.</p>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-text">
+                    <span class="section-eyebrow" data-i18n="contact.eyebrow">Contattami</span>
+                    <h2 class="section-title" data-i18n-html="contact.title">Scegliamo insieme<br>la tua avventura</h2>
+                    <p data-i18n="contact.text">Sfoglia i pacchetti e le destinazioni, segna ciò che ti incuriosisce di più — poi contattami direttamente. Costruiremo insieme l'itinerario su misura per te.</p>
+                    <div class="contact-steps">
+                        <h4 class="contact-steps-title" data-i18n="contact.steps.title">Come funziona</h4>
+                        <div class="contact-step">
+                            <span class="step-num">1</span>
+                            <p data-i18n="contact.step1">Sfoglia i pacchetti e le destinazioni che ti incuriosiscono</p>
+                        </div>
+                        <div class="contact-step">
+                            <span class="step-num">2</span>
+                            <p data-i18n="contact.step2">Annotati quello che vorresti fare o vedere</p>
+                        </div>
+                        <div class="contact-step">
+                            <span class="step-num">3</span>
+                            <p data-i18n="contact.step3">Contattami e ci accordiamo insieme sulle attività</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta-wrap">
+                    <div class="contact-buttons">
+                        <a href="tel:+393349209193" class="contact-btn contact-btn-phone">
+                            <span class="contact-btn-icon">📞</span>
+                            <div>
+                                <span class="contact-btn-label" data-i18n="contact.btn.phone">Chiamami</span>
+                                <span class="contact-btn-detail">+39 334 920 9193</span>
+                            </div>
+                        </a>
+                        <a href="mailto:claudiomonti9720@gmail.com" class="contact-btn contact-btn-email">
+                            <span class="contact-btn-icon">✉</span>
+                            <div>
+                                <span class="contact-btn-label" data-i18n="contact.btn.email">Scrivimi</span>
+                                <span class="contact-btn-detail">claudiomonti9720@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/393349209193" target="_blank" rel="noopener" class="contact-btn contact-btn-wa">
+                            <span class="contact-btn-icon">💬</span>
+                            <div>
+                                <span class="contact-btn-label" data-i18n="contact.btn.wa">WhatsApp</span>
+                                <span class="contact-btn-detail" data-i18n="contact.btn.wa.detail">Scrivimi su WhatsApp</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label" data-i18n="contact.area.label">Area operativa</span>
+                            <span data-i18n="contact.area.val">Valdinievole, Lucca, Pistoia, Firenze, Pisa</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label" data-i18n="contact.langs.label">Lingue</span>
+                            <span data-i18n="contact.langs.val">Italiano, Inglese, Francese</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label" data-i18n="contact.groups.label">Gruppi</span>
+                            <span data-i18n="contact.groups.val">Coppie, famiglie, gruppi privati, tour operator</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label" data-i18n="contact.season.label">Stagionalità</span>
+                            <span data-i18n="contact.season.val">Tour disponibili tutto l'anno, con programmi stagionali</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">CICERONE</span>
+                    <p data-i18n="footer.desc">Guida turistica in Valdinievole e Toscana. Borghi, terme, arte, natura e sapori autentici.</p>
+                    <p style="margin-top:0.75rem">
+                        <a href="tel:+393349209193" style="color:rgba(255,255,255,0.6);font-size:0.875rem;display:block;margin-bottom:0.3rem">📞 +39 334 920 9193</a>
+                        <a href="mailto:claudiomonti9720@gmail.com" style="color:rgba(255,255,255,0.6);font-size:0.875rem">✉ claudiomonti9720@gmail.com</a>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="nav.packages">Pacchetti</h4>
+                    <ul>
+                        <li><a href="#packages" data-i18n="filter.half">Mezza giornata</a></li>
+                        <li><a href="#packages" data-i18n="filter.full">Giornata intera</a></li>
+                        <li><a href="#packages" data-i18n="filter.multi">Multi-giorno</a></li>
+                        <li><a href="#contact" data-i18n="footer.custom">Itinerario personalizzato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="nav.destinations">Destinazioni</h4>
+                    <ul>
+                        <li><a href="#destinations">Valdinievole</a></li>
+                        <li><a href="#destinations" data-i18n="footer.d2">Lucca &amp; dintorni</a></li>
+                        <li><a href="#destinations" data-i18n="footer.d3">Firenze, Pisa, Pistoia</a></li>
+                        <li><a href="#destinations">Padule di Fucecchio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="#about" data-i18n="nav.about">Chi siamo</a></li>
+                        <li><a href="#products" data-i18n="nav.products">Sapori</a></li>
+                        <li><a href="#contact">Contatti</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Prenota</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copy">&copy; 2024 Cicerone — Guida Turistica in Valdinievole e Toscana</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content" id="modalContent">
+            <button class="modal-close" id="modalClose" aria-label="Chiudi">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Torna in cima">&#8679;</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

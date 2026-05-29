@@ -6,8 +6,7 @@ const App = () => {
   const [language, setLanguage] = useState('it');
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // TODO: aggiornare con l'URL del sito Cicerone una volta online
-  const ciceroneUrl = '#';
+  const ciceroneUrl = '/cicerone/';
 
   const texts = {
     it: {
@@ -439,8 +438,6 @@ const App = () => {
           </div>
           <a
             href={ciceroneUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="cicerone-banner-btn"
           >
             {language === 'it' ? 'Scopri i tour →' : 'Discover the tours →'}
