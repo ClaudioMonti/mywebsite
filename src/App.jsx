@@ -40,9 +40,12 @@ const App = () => {
         items: [
           { icon: '📶', name: 'WiFi Gratuito', desc: 'Connessione veloce in tutto l\'appartamento' },
           { icon: '🔥', name: 'Riscaldamento', desc: 'Per le fresche sere toscane' },
+          { icon: '❄️', name: 'Aria Condizionata', desc: 'Fresco garantito nelle calde estati toscane' },
           { icon: '🚗', name: 'Parcheggio', desc: 'Gratuito nelle aree circostanti' },
           { icon: '🍳', name: 'Cucina Attrezzata', desc: 'Tutto il necessario per cucinare' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Check-in e check-out automatici' },
+          { icon: '🚲', name: 'Noleggio Biciclette', desc: 'Esplora il territorio su due ruote', link: bikeUrl },
+          { icon: '🧭', name: 'Tour con Cicerone', desc: 'Escursioni guidate in Valdinievole e Toscana', link: ciceroneUrl },
         ],
       },
       location: {
@@ -152,9 +155,12 @@ const App = () => {
         items: [
           { icon: '📶', name: 'Free WiFi', desc: 'Fast connection throughout the apartment' },
           { icon: '🔥', name: 'Heating', desc: 'For cool Tuscan evenings' },
+          { icon: '❄️', name: 'Air Conditioning', desc: 'Stay cool during hot Tuscan summers' },
           { icon: '🚗', name: 'Parking', desc: 'Free in surrounding areas' },
           { icon: '🍳', name: 'Equipped Kitchen', desc: 'Everything you need to cook' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Automatic check-in and check-out' },
+          { icon: '🚲', name: 'Bike Rental', desc: 'Explore the area on two wheels', link: bikeUrl },
+          { icon: '🧭', name: 'Tours with Cicerone', desc: 'Guided excursions in Valdinievole and Tuscany', link: ciceroneUrl },
         ],
       },
       location: {
@@ -264,9 +270,12 @@ const App = () => {
         items: [
           { icon: '📶', name: 'WiFi Gratuit', desc: 'Connexion rapide dans tout l\'appartement' },
           { icon: '🔥', name: 'Chauffage', desc: 'Pour les fraîches soirées toscanes' },
+          { icon: '❄️', name: 'Climatisation', desc: 'Fraîcheur assurée pendant les étés toscans' },
           { icon: '🚗', name: 'Parking', desc: 'Gratuit dans les zones environnantes' },
           { icon: '🍳', name: 'Cuisine Équipée', desc: 'Tout le nécessaire pour cuisiner' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Arrivée et départ automatiques' },
+          { icon: '🚲', name: 'Location de Vélos', desc: 'Explorez la région à deux roues', link: bikeUrl },
+          { icon: '🧭', name: 'Tours avec Cicerone', desc: 'Excursions guidées en Valdinievole et Toscane', link: ciceroneUrl },
         ],
       },
       location: {
