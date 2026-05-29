@@ -6,6 +6,9 @@ const App = () => {
   const [language, setLanguage] = useState('it');
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // TODO: aggiornare con l'URL del sito Cicerone una volta online
+  const ciceroneUrl = '#';
+
   const texts = {
     it: {
       nav: {
@@ -39,6 +42,7 @@ const App = () => {
           { icon: '🍳', name: 'Cucina Attrezzata', desc: 'Tutto il necessario per cucinare' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Check-in e check-out automatici' },
           { icon: '🚲', name: 'Noleggio Biciclette', desc: 'Servizio disponibile su richiesta', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
+          { icon: '🧭', name: 'Tour con Cicerone', desc: 'Escursioni guidate in Valdinievole e Toscana', link: ciceroneUrl },
         ],
       },
       location: {
@@ -128,6 +132,7 @@ const App = () => {
           { icon: '🍳', name: 'Equipped Kitchen', desc: 'Everything you need to cook' },
           { icon: '🔑', name: 'Self Check-in', desc: 'Automatic check-in and check-out' },
           { icon: '🚲', name: 'Bike Rental', desc: 'Service available on request', link: 'https://bike-rental-bnb-w7nx.onrender.com/' },
+          { icon: '🧭', name: 'Tours with Cicerone', desc: 'Guided excursions in Valdinievole and Tuscany', link: ciceroneUrl },
         ],
       },
       location: {
@@ -415,6 +420,31 @@ const App = () => {
               <p>{place.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Cicerone Banner */}
+      <section className="cicerone-banner-section">
+        <div className="cicerone-banner">
+          <div className="cicerone-banner-text">
+            <span className="cicerone-eyebrow">
+              {language === 'it' ? 'Il tuo host è anche guida turistica' : 'Your host is also a tour guide'}
+            </span>
+            <h2 className="cicerone-banner-title">CICERONE</h2>
+            <p>
+              {language === 'it'
+                ? '12 pacchetti escursionistici tra borghi medievali, terme storiche, capolavori d\'arte e sapori autentici della Valdinievole e Toscana.'
+                : '12 excursion packages through medieval villages, historic spas, art masterpieces and authentic flavours of the Valdinievole and Tuscany.'}
+            </p>
+          </div>
+          <a
+            href={ciceroneUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cicerone-banner-btn"
+          >
+            {language === 'it' ? 'Scopri i tour →' : 'Discover the tours →'}
+          </a>
         </div>
       </section>
 

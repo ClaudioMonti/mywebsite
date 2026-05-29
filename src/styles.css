@@ -1254,3 +1254,91 @@ p {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+
+/* ===== CICERONE BANNER ===== */
+.cicerone-banner-section {
+  padding: 40px 20px;
+  background: var(--cream-dark);
+}
+
+.cicerone-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  background: linear-gradient(135deg, #2d1a0a 0%, #4a2810 55%, #1a1008 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(201, 169, 98, 0.25);
+}
+
+.cicerone-banner-text {
+  flex: 1;
+}
+
+.cicerone-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.cicerone-banner-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.cicerone-banner p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 500px;
+  margin: 0;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.cicerone-banner-btn {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 1rem 2rem;
+  background: var(--terracotta);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.cicerone-banner-btn:hover {
+  background: var(--terracotta-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(196, 92, 62, 0.35);
+}
+
+@media (max-width: 768px) {
+  .cicerone-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 25px;
+  }
+
+  .cicerone-banner p {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
